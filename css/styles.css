@@ -4,3 +4,7 @@ body {
 #player2Roll, #player2Hold, #player1Hold, #player2Hold{
   display: none;
 }
+
+#player1Score, #player2Score {
+  float: right;
+}

@@ -35,7 +35,8 @@ user clicks 'roll', generates random number 1-6 | roll:click | 4
 user clicks 'roll' again | roll:click | 4,5
 user clicks 'hold' without having rolled | hold:click | alert(please roll at least once per turn)
 user clicks 'hold', adds turn total to score | hold:click | 4 + 5, total +9
-user clicks 'hold', adds turn total to score, turn ends | hold:click | 4 + 5, total +9, turn ends
+user clicks 'hold', adds turn total to score, turn ends turn | hold:click | 4 + 5, total +9, turn ends
+user clicks 'hold', add score, turn end, current rolls cleared | hold:click | Current rolls: " "
 user rolls 1, turn total changed to 0 | roll:click | total + 0
 user rolls 1, turn total changed to 0, turn ends | roll:click | total + 0, turn ends
 user score >= 100 | hold:click | shows 'winner!' element
