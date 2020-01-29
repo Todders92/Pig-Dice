@@ -1,6 +1,6 @@
 body {
   background-color: lightblue;
 }
-#player2Roll, #player2Hold {
+#player2Roll, #player2Hold, #player1Hold, #player2Hold{
   display: none;
 }
