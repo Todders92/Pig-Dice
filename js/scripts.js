@@ -19,7 +19,7 @@ Player.prototype.hold = function() {
   for (var i = 0; i < this.turnTotal.length; i ++) {
     this.score += this.turnTotal[i];
   }
-
+  this.turnTotal.splice(0,this.turnTotal.length);
   if (this.score >= 100) {
    alert("You win!");
   }
