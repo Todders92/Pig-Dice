@@ -8,9 +8,10 @@ Player.prototype.roll = function() {
 }
 
 Player.prototype.check = function() {
-  if (this.turnTotal.includes(1, (this.turnTotal.length-1))) {
+  if (this.turnTotal.includes(1)) {
     this.turnTotal = [0];
-    this.hold();
+    $("#player1Roll").hide();
+    $("#player2Roll").hide();
   }
 }
 
@@ -18,15 +19,15 @@ Player.prototype.hold = function() {
   for (var i = 0; i < this.turnTotal.length; i ++) {
     this.score += this.turnTotal[i];
   }
+
   if (this.score >= 100) {
    alert("You win!");
   }
   return this.score;
 }
+
 var player1 = new Player([],0);
 var player2 = new Player([],0);
-
-
 
 //  front end logic
 $(document).ready(function() {
@@ -37,6 +38,10 @@ $(document).ready(function() {
     $("#player1Hold").hide();
     $("#player1Score").text(results);
     $("#player2Rolls").text("");
+    // var hold = function() {
+    //   $("#player1Roll").hide();
+    // $("#player2Roll").hide();
+    // };
   });
   $("#player2Hold").click(function() {
     var results = player2.hold();
