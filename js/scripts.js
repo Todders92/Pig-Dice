@@ -3,6 +3,10 @@ function Player(turnTotal, score) {
   this.turnTotal = turnTotal,
   this.score = score
 }
+
+var player1 = new Player([],0);
+var player2 = new Player([],0);
+
 Player.prototype.roll = function() {
   return Math.floor(Math.random() * (6)+ 1);
 }
@@ -10,8 +14,7 @@ Player.prototype.roll = function() {
 Player.prototype.check = function() {
   if (this.turnTotal.includes(1)) {
     this.turnTotal = [0];
-    $("#player1Roll").hide();
-    $("#player2Roll").hide();
+    endTurn();
   }
 }
 
@@ -26,10 +29,13 @@ Player.prototype.hold = function() {
   return this.score;
 }
 
-var player1 = new Player([],0);
-var player2 = new Player([],0);
 
 //  front end logic
+var endTurn = function() {
+  $("#player1Roll").hide();
+  $("#player2Roll").hide();
+};
+
 $(document).ready(function() {
   $("#player1Hold").click(function() {
     var results = player1.hold();
@@ -37,11 +43,7 @@ $(document).ready(function() {
     $("#player1Roll").hide();
     $("#player1Hold").hide();
     $("#player1Score").text(results);
-    $("#player2Rolls").text("");
-    // var hold = function() {
-    //   $("#player1Roll").hide();
-    // $("#player2Roll").hide();
-    // };
+    $("#player1Rolls").text("");
   });
   $("#player2Hold").click(function() {
     var results = player2.hold();
@@ -49,7 +51,7 @@ $(document).ready(function() {
     $("#player2Roll").hide();
     $("#player2Hold").hide();
     $("#player2Score").text(results);
-    $("#player1Rolls").text("");
+    $("#player2Rolls").text("");
   });
   $("#player1Roll").click(function() {
     var roll = player1.roll();

@@ -1,52 +1,60 @@
-# _{Application Name}_
+# _Pig Dice_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _A game of luck and bravery_
 
-#### By _**{List of contributors}**_
+#### By _**Todd Walraven and Isaac Garnand**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This Application pits two players against each other to see who can roll a total that adds up to 100. But heres the catch, if they roll a 1, the sum of their current rolls is set to 0 and their turn is up. The first to 100 is the winner_
 
 ## Setup/Installation Requirements
+### Through Web Browser
+* _download this respository from GitHub_
+* _navigate to project directory_
+* _double click index.html_
+### Through Terminal
+* _open terminal_
+* _navigate to desktop_
+* _use git clone command to download reposity_
+* _change directory into Pig-dice_
+* _ use command open index.html_
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+_If using windows machine user must install Git Bash or similar application to be able to clone the repository from GitHub_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_Application doesn't end unless page is reset_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_Have any questions/suggestions Email us at cod4247@yahoo.com_
 
 ## Specs
 Behaviour | Input | Outputs
 ---|---|---
 user clicks 'play' | play:click | displays game page
-user's turns ends | hold:click OR roll:click | turn switches to other player
+user's clicks 'hold', ending their turn | hold:click | turn switches to other player
 user clicks 'roll', generates random number 1-6 | roll:click | 4
-user clicks 'roll' again | roll:click | 4,5
-user clicks 'hold' without having rolled | hold:click | alert(please roll at least once per turn)
-user clicks 'hold', adds turn total to score | hold:click | 4 + 5, total +9
-user clicks 'hold', adds turn total to score, turn ends turn | hold:click | 4 + 5, total +9, turn ends
+user clicks 'roll' again, appends another roll| roll:click | 4,5
+user can't hold until they roll | hold:click\(hidden\) | \(button is hidden\)
+user clicks 'hold', after rolling , hides roll button for player who rolled| hold:click | roll: hidden
+user clicks 'hold', after rolling, adds turn total to score and hides roll button| hold:click | 4 + 5, total +9 hold: hidden
 user clicks 'hold', add score, turn end, current rolls cleared | hold:click | Current rolls: " "
 user rolls 1, turn total changed to 0 | roll:click | total + 0
-user rolls 1, turn total changed to 0, turn ends | roll:click | total + 0, turn ends
-user score >= 100 | hold:click | shows 'winner!' element
+user rolls 1, turn total changed to 0, hides roll button| roll:click | total + 0, turn ends
+user score >= 100 | score:100| shows 'winner!' element
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
-
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _JavaScript_
+* _JQuery_
+* _VSCode_
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*This Application is licensed under the GPL license*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2020 **_Todd Walraven, Isaac Garnand_**
