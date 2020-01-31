@@ -8,3 +8,6 @@ body {
 #player1Score, #player2Score {
   float: right;
 }
+#output {
+  background-color: whitesmoke
+}

@@ -1,11 +1,12 @@
 // back end logic
-function Player(turnTotal, score) {
+function Player(player, turnTotal, score) {
+  this.player = player,
   this.turnTotal = turnTotal,
   this.score = score
 }
 
-var player1 = new Player([],0);
-var player2 = new Player([],0);
+var player1 = new Player("Player 1",[],0);
+var player2 = new Player("Player 2",[],0);
 
 Player.prototype.roll = function() {
   return Math.floor(Math.random() * (6)+ 1);
@@ -22,13 +23,22 @@ Player.prototype.hold = function() {
   for (var i = 0; i < this.turnTotal.length; i ++) {
     this.score += this.turnTotal[i];
   }
+  this.speak();
   this.turnTotal.splice(0,this.turnTotal.length);
   if (this.score >= 100) {
-   alert("You win!");
+   this.winner();
+   alert(this.player + " wins!")
   }
   return this.score;
 }
 
+Player.prototype.speak = function() {
+  $("#output").prepend("<li>" + this.player + " held, adding " + this.turnTotal + " to their score </li>");
+}
+
+Player.prototype.winner = function() {
+  $("#output").prepend("<li>" + this.player + " has scored 100 points and wins the game!!!");
+}
 
 //  front end logic
 var endTurn = function() {
