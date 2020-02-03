@@ -11,11 +11,24 @@
 
 <body>
   <div class="container">
-    <h1>Two-player Pig Dice!</h1>
+    <div class="jumbotron">
+      <h1 class="text-center"><strong>Pig Dice!</strong></h1>
+    </div>
+    <div class="card">
+      <h3 class="card-header">Rules:</h3>
+      <ul>
+        <li>the first player rolls a dice by hitting the roll button</li>
+        <li>The player can click the hold button and then the total of their rolls is added to their score, ending their
+          turn</li>
+        <li>the player can continue rolling until the decide to hold or they roll a 1</li>
+        <li>if a player rolls a 1 their turn ends and they are awarded 0 points to their score</li>
+        <li>The first player to 100 wins</li>
+      </ul>
+    </div><br>
     <div class="row">
       <div class="col-md-6">
         <div class="card">
-          <h3 class="card-header">Player 1 score <span id="player1Score"></span></h3>
+          <h3 class="card-header bg-info">Player 1 Score: <span id="player1Score"></span></h3>
           <div class="card-body">
             <p class="card-text">Current rolls: <span id="player1Rolls"></span></p>
             <button class="btn btn-primary" id="player1Roll">Roll</button>
@@ -25,7 +38,7 @@
       </div>
       <div class="col-md-6">
         <div class="card">
-          <h3 class="card-header">Player 2 score: <span id="player2Score"></span></h3>
+          <h3 class="card-header bg-danger">Player 2 Score: <span id="player2Score"></span></h3>
           <div class="card-body">
             <p class="card-text">Current rolls: <span id="player2Rolls"></span></p>
             <button class="btn btn-primary" id="player2Roll">Roll</button>
@@ -35,7 +48,7 @@
       </div>
     </div><br>
     <div class="card">
-      <h5 class="card-header">Game Feed</h5>
+      <h5 class="card-header bg-success">Game Feed</h5>
       <div class="card-body">
         <ul id="output">
 
