@@ -10,15 +10,15 @@ _This Application pits two players against each other to see who can roll a tota
 
 ## Setup/Installation Requirements
 ### Through Web Browser
-* _download this respository from GitHub_
-* _navigate to project directory_
-* _double click index.html_
+* _Download this respository from GitHub_
+* _Navigate to project directory_
+* _Double click index.html_
 ### Through Terminal
-* _open terminal_
-* _navigate to desktop_
-* _use git clone command to download reposity_
-* _change directory into Pig-dice_
-* _ use command open index.html_
+* _Open terminal_
+* _Navigate to desktop_
+* _Use git clone command to download reposity_
+* _Change directory into Pig-dice_
+* _Use command open index.html_
 
 _If using windows machine user must install Git Bash or similar application to be able to clone the repository from GitHub_
 
